@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/class/Q1MgMjM0MC4wMTA=", {data:[{_img:{"/instructor-integration/_ipx/h_28/banana.png":"\u002Finstructor-integration\u002F_nuxt\u002Fimage\u002F87971a.png"}}],fetch:{"data-v-671da6d6:0":{classData:{meta:{name:"Computer Architecture",code:"CS 2340.010",professor:"John Cole"}}}},mutations:[]});
