@@ -51,5 +51,9 @@ export default {
     }
   },
 
-  build: {}
+  build: {},
+
+  router: {
+    base: process.env.BASE_URL || '/'
+  }
 }
