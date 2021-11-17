@@ -30,7 +30,7 @@ export default {
 
   css: [],
 
-  plugins: [],
+  plugins: ['~/plugins/base64'],
 
   components: true,
 

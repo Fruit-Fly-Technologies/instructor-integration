@@ -18,9 +18,9 @@
         </nuxt-link>
 
         <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
+          <span/>
+          <span/>
+          <span/>
         </div>
       </div>
     </nav>
@@ -29,13 +29,13 @@
       <aside class="column is-2 section">
         <b-menu>
           <b-menu-list label="Menu">
-            <b-menu-item icon="home" label="Home" tag="nuxt-link" to="/" />
+            <b-menu-item icon="home" label="Home" tag="nuxt-link" to="/"/>
             <b-menu-list label="Classes">
               <b-menu-item
                 v-for="class_ in $store.getters.classes"
                 :key="class_.meta.code"
                 :label="class_.meta.code"
-                :to="{path: `/class/${class_.meta.code}`}"
+                :to="{path: `/class/${$encodeBase64(class_.meta.code)}`}"
                 expanded
                 icon="school"
                 tag="nuxt-link"
@@ -44,7 +44,7 @@
                   v-for="tab in classTabs"
                   :key="tab"
                   :label="tab"
-                  :to="{path: `/class/${class_.meta.code}/${tab.toLowerCase()}`}"
+                  :to="{path: `/class/${$encodeBase64(class_.meta.code)}/${tab.toLowerCase()}`}"
                   tag="nuxt-link"
                 />
               </b-menu-item>
@@ -54,28 +54,18 @@
       </aside>
 
       <div class="container column is-10">
-        <Nuxt />
+        <Nuxt/>
       </div>
     </section>
   </div>
 </template>
 
 <script>
+
+
 export default {
   data () {
     return {
-      items: [
-        {
-          title: 'Home',
-          icon: 'home',
-          to: { name: 'index' }
-        },
-        {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' }
-        }
-      ],
       classTabs: [
         'Assignments',
         'Announcements'

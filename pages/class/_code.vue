@@ -11,7 +11,7 @@
       </div>
     </header>
     <section class="section">
-      <nuxt-child />
+      <nuxt-child/>
     </section>
   </div>
 </template>
@@ -24,7 +24,8 @@ export default {
     }
   },
   fetch () {
-    const class_ = this.$store.getters.class_(this.$route.params.code)
+    const code = this.$decodeBase64(this.$route.params.code)
+    const class_ = this.$store.getters.class_(code)
     // FIXME: doesn't go to error page
     if (!class_) {
       this.error({
