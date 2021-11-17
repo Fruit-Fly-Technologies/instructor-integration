@@ -21,6 +21,8 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run generate
+      env:
+        BASE_URL: '/instructor-integration'
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v2.5.0
       with:
@@ -30,4 +32,3 @@ jobs:
         verbose: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BASE_URL: '/instructor-integration'
