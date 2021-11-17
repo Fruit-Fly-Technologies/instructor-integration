@@ -1,6 +1,6 @@
 <template>
   <div>
-    <announcement v-for="announcement in announcements" :announcement="announcement" class="card" />
+    <announcement v-for="announcement in announcements" :announcement="announcement" class="card"/>
   </div>
 </template>
 
@@ -12,7 +12,8 @@ export default {
     }
   },
   fetch () {
-    this.announcements = this.$store.getters.class_(this.$route.params.code).announcements
+    const code = this.$decodeBase64(this.$route.params.code)
+    this.announcements = this.$store.getters.class_(code).announcements
   }
 }
 </script>

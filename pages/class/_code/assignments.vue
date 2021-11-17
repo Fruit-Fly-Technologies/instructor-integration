@@ -12,7 +12,8 @@ export default {
     }
   },
   fetch () {
-    this.assignments = this.$store.getters.class_(this.$route.params.code).assignments
+    const code = this.$decodeBase64(this.$route.params.code)
+    this.assignments = this.$store.getters.class_(code).assignments
   }
 }
 </script>
