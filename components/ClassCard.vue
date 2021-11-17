@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="`/class/${$encodeBase64(code)}`" class="column is-one-third card-container">
+  <nuxt-link :to="`/class/${$encodeBase64(code)}`" class="column card-container">
     <div class="card">
       <div class="card-content">
         <p class="title">

@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <div class="columns is-mobile">
+    <div class="columns">
       <class-card
         v-for="class_ in $store.state.profiles[$store.state.currentProfile].classes"
         :key="class_.meta.code"
